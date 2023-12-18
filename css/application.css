@@ -1,3 +1,11 @@
+/* line 1, ../../../GitHub/Portfolio/scss/components/_containers.scss */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -382,7 +390,7 @@ body {
   font-size: 1rem;
 }
 
-/* line 1, ../../../GitHub/Portfolio/scss/layout/_header.scss */
+/* line 1, ../../../GitHub/Portfolio/scss/layout/_banner.scss */
 .banner {
   display: flex;
   flex-direction: column;
@@ -394,26 +402,40 @@ body {
   padding: 20px;
 }
 
-/* line 12, ../../../GitHub/Portfolio/scss/layout/_header.scss */
-h1 {
+/* line 17, ../../../GitHub/Portfolio/scss/layout/_banner.scss */
+.banner h1 {
   text-align: center;
 }
 
-/* line 16, ../../../GitHub/Portfolio/scss/layout/_header.scss */
+/* line 21, ../../../GitHub/Portfolio/scss/layout/_banner.scss */
 .scroll-down {
   position: absolute;
+  bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  bottom: 20px;
 }
 
-/* line 24, ../../../GitHub/Portfolio/scss/layout/_header.scss */
+/* line 33, ../../../GitHub/Portfolio/scss/layout/_banner.scss */
 .scroll-down::after {
   content: '\2193';
   display: block;
   font-size: 24px;
   margin-top: 5px;
+}
+
+/* line 1, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 6, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+.project-item {
+  background-color: #3498db;
+  width: 100%;
+  height: 200px;
+  margin: 20px 0;
 }
 
 /*# sourceMappingURL=application.css.map */
