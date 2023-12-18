@@ -4,8 +4,55 @@
 }
 
 .project-item {
-    background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    border: 1px solid $grey;
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+.project-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 200px;
-    margin: 20px 0;
+
+    h3 {
+        color: $primary-color;
+    }
+
+    p {
+        line-height: 1.375rem;
+        font-size: .8125rem;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white;
+    }
+}
+
+.project-tech {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline;
+        margin-right: 5px;
+        font-size: .8125rem;
+    }
 }
