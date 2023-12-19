@@ -1,0 +1,46 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Center form elements.
+    margin-top: 15px;
+
+    h2 {
+        color: $primary-color;
+    }
+
+    p {
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    p, .text-field, .text-area {
+        font-size: .875rem;
+    }
+
+    .text-field, .text-area {
+        margin-bottom: 15px;
+    }
+
+    .text-area {
+        resize: none;
+        height: 150px;
+    }
+
+    .button {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white;
+        width: 100%;
+    }
+}
+
+.name-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    // Make text fields stretch to width of container.
+    .text-field {
+        width: 100%;
+    }
+}

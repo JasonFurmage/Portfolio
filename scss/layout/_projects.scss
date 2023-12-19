@@ -1,28 +1,53 @@
+.projects-heading {
+    display: flex;
+    justify-content: center; // Center heading.
+    margin-top: 15px;
+    margin-bottom: -15px;
+
+    h2 {
+        color: $primary-color;
+    }
+}
+
 .projects {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; // Show projects in single column on small devices.
+
+    // Show projects in row on medium sized devices.
+    @include mq(medium) {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+.project-item-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    // Show two projects on each row on medium and large sized devices.
+    @include mq(medium) {
+        width: 50%;
+    }
+
+    // Show three projects on each row on extra large devices.
+    @include mq(x-large) {
+        width: 33.33%;
+    }
 }
 
 .project-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
+    margin-top: 30px; // Add vertical gap between projects.
     border: 1px solid $grey;
-
-    img {
-        height: auto;
-        width: 100%;
-    }
+    border-radius: 3px 3px 3px 3px; // Add rounded corners.
 }
 
 .project-body {
-    padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    align-items: center; // Center body contents.
+    padding: 30px;
 
     h3 {
         color: $primary-color;
@@ -43,13 +68,13 @@
 
 .project-tech {
     margin-top: 30px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $grey; // Add divider line.
 
     ul {
         padding: 0;
-        list-style: none;
     }
 
+    // Show list as row.
     li {
         display: inline;
         margin-right: 5px;

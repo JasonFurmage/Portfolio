@@ -1,0 +1,15 @@
+.text-field, .text-area {
+    width: 100%;
+    height: 47px;
+    padding: 5px 15px;
+    border: 1px solid $grey;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+
+    // Highlight text field when active.
+    &:focus {
+        border-color: $primary-color;
+        outline: 0;
+        transition: border-color .15s ease-in-out
+    }
+}

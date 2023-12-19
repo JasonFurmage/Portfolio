@@ -3,4 +3,21 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+
+    // Adjust container width according to screen size.
+    @include mq(small) {
+        width: $cont-width-sm;
+    }
+
+    @include mq(medium) {
+        width: $cont-width-md;
+    }
+
+    @include mq(large) {
+        width: $cont-width-lg;
+    }
+
+    @include mq(x-large) {
+        width: $cont-width-xl;
+    }
 }
