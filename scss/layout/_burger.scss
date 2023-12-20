@@ -1,0 +1,29 @@
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    // Fix burger menu to top right.
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    
+    // Add border with rounded corners.
+    border: 2px solid $grey;
+    border-radius: 6px;
+    
+    padding: 10px 12.5px;
+    background-color: $white;
+
+    // Hide burger menu on large+ devices.
+    @include mq(large) {
+        display: none;
+    }
+}
+
+.bar {
+    height: 3px;
+    width: 40px;
+    margin: 6px 0;
+    background-color: $primary-color;
+}

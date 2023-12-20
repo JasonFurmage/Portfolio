@@ -465,6 +465,35 @@ a {
   text-decoration: none;
 }
 
+/* line 1, ../../../GitHub/Portfolio/scss/layout/_burger.scss */
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 12.5px;
+  background-color: #ffffff;
+}
+
+@media (min-width: 992px) {
+  /* line 1, ../../../GitHub/Portfolio/scss/layout/_burger.scss */
+  .burger-menu {
+    display: none;
+  }
+}
+
+/* line 24, ../../../GitHub/Portfolio/scss/layout/_burger.scss */
+.bar {
+  height: 3px;
+  width: 40px;
+  margin: 6px 0;
+  background-color: #3498db;
+}
+
 /* line 1, ../../../GitHub/Portfolio/scss/layout/_banner.scss */
 .banner {
   display: flex;
@@ -494,6 +523,63 @@ a {
 /* line 32, ../../../GitHub/Portfolio/scss/layout/_banner.scss */
 .scroll-down a {
   color: #ffffff;
+}
+
+/* The sidebar menu */
+/* line 2, ../../../GitHub/Portfolio/scss/layout/_sidenav.scss */
+.sidenav {
+  height: 100%;
+  /* Full-height: remove this if you want "auto" height */
+  width: 160px;
+  /* Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #111;
+  /* Black */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+/* line 15, ../../../GitHub/Portfolio/scss/layout/_sidenav.scss */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+/* line 24, ../../../GitHub/Portfolio/scss/layout/_sidenav.scss */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+/* line 29, ../../../GitHub/Portfolio/scss/layout/_sidenav.scss */
+.main {
+  margin-left: 160px;
+  /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  /* line 36, ../../../GitHub/Portfolio/scss/layout/_sidenav.scss */
+  .sidenav {
+    padding-top: 15px;
+  }
+  /* line 37, ../../../GitHub/Portfolio/scss/layout/_sidenav.scss */
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 /* line 1, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
@@ -549,10 +635,10 @@ a {
   flex-direction: column;
   margin-top: 30px;
   border: 1px solid #ccc;
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 3px;
 }
 
-/* line 46, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 48, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .project-body {
   display: flex;
   flex-direction: column;
@@ -560,37 +646,37 @@ a {
   padding: 30px;
 }
 
-/* line 52, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 54, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .project-body h3 {
   color: #3498db;
 }
 
-/* line 56, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 58, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .project-body p {
   line-height: 1.375rem;
   font-size: .8125rem;
   margin-bottom: 30px;
 }
 
-/* line 62, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 64, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .project-body .button {
   background-color: #3498db;
   border-color: #3498db;
   color: #ffffff;
 }
 
-/* line 69, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 71, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .project-tech {
   margin-top: 30px;
   border-top: 1px solid #ccc;
 }
 
-/* line 73, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 75, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .project-tech ul {
   padding: 0;
 }
 
-/* line 78, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 80, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .project-tech li {
   display: inline;
   margin-right: 5px;
@@ -601,55 +687,105 @@ a {
 .form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
-/* line 7, ../../../GitHub/Portfolio/scss/layout/_form.scss */
-.form h2 {
+@media (min-width: 768px) {
+  /* line 1, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+  .form {
+    flex-direction: row;
+  }
+}
+
+/* line 12, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+.form-section {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  /* line 12, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+  .form-section {
+    width: 50%;
+  }
+}
+
+/* line 21, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+.form-info {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100%;
+  margin-bottom: 15px;
+  border: 1px dotted #ccc;
+  border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  /* line 21, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+  .form-info {
+    margin-bottom: 0px;
+  }
+}
+
+/* line 40, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+.form-info p {
+  font-size: .875rem;
+  text-align: left;
+  margin-top: 0px;
+}
+
+/* line 46, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+.form-info strong {
   color: #3498db;
 }
 
-/* line 11, ../../../GitHub/Portfolio/scss/layout/_form.scss */
-.form p {
-  margin-top: 0px;
-  text-align: center;
-}
-
-/* line 16, ../../../GitHub/Portfolio/scss/layout/_form.scss */
-.form p, .form .text-field, .form .text-area {
+/* line 52, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+.form-input .text-field, .form-input .text-area {
   font-size: .875rem;
-}
-
-/* line 20, ../../../GitHub/Portfolio/scss/layout/_form.scss */
-.form .text-field, .form .text-area {
   margin-bottom: 15px;
 }
 
-/* line 24, ../../../GitHub/Portfolio/scss/layout/_form.scss */
-.form .text-area {
+/* line 57, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+.form-input .text-area {
   resize: none;
   height: 150px;
 }
 
-/* line 29, ../../../GitHub/Portfolio/scss/layout/_form.scss */
-.form .button {
+/* line 62, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+.form-input .button {
+  color: #ffffff;
   background-color: #3498db;
   border-color: #3498db;
-  color: #ffffff;
   width: 100%;
 }
 
-/* line 37, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+/* line 70, ../../../GitHub/Portfolio/scss/layout/_form.scss */
 .name-wrapper {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
-/* line 43, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+/* line 76, ../../../GitHub/Portfolio/scss/layout/_form.scss */
 .name-wrapper .text-field {
   width: 100%;
+}
+
+@media (min-width: 1260px) {
+  /* line 70, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+  .name-wrapper {
+    flex-wrap: nowrap;
+  }
+  /* line 86, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+  .name-wrapper :nth-child(1) {
+    margin-right: 15px;
+  }
+  /* line 91, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+  .name-wrapper .text-field {
+    width: 50%;
+  }
 }
 
 /* line 1, ../../../GitHub/Portfolio/scss/layout/_footer.scss */
@@ -663,10 +799,11 @@ footer {
   flex-direction: column;
   align-items: center;
   padding-top: 7px;
-  margin-top: 15px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-/* line 14, ../../../GitHub/Portfolio/scss/layout/_footer.scss */
+/* line 15, ../../../GitHub/Portfolio/scss/layout/_footer.scss */
 .scroll-up a {
   color: #3498db;
 }

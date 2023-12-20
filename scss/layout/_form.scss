@@ -1,23 +1,56 @@
 .form {
     display: flex;
     flex-direction: column;
-    align-items: center; // Center form elements.
-    margin-top: 15px;
+    margin-top: 30px;
 
-    h2 {
-        color: $primary-color;
+    // Put form info and inputs on same line on medium+ sized devices.
+    @include mq(medium) {
+        flex-direction: row;
     }
+}
+
+.form-section {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include mq(medium) {
+        width: 50%;
+    }
+}
+
+.form-info {
+    // Indent content.
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    height: 100%;
+    margin-bottom: 15px;
+
+    // Remove bottom margin on medium+ devices.
+    @include mq(medium) {
+        margin-bottom: 0px;
+    }
+    
+    // Add border with rounded corners.
+    border: 1px dotted $grey;
+    border-radius: 3px;
 
     p {
-        margin-top: 0px;
-        text-align: center;
-    }
-
-    p, .text-field, .text-area {
         font-size: .875rem;
+        text-align: left;
+        margin-top: 0px;
     }
 
+    strong {
+        color: $primary-color;
+    }
+}
+
+.form-input {
     .text-field, .text-area {
+        font-size: .875rem;
         margin-bottom: 15px;
     }
 
@@ -27,9 +60,9 @@
     }
 
     .button {
+        color: $white;
         background-color: $primary-color;
         border-color: $primary-color;
-        color: $white;
         width: 100%;
     }
 }
@@ -42,5 +75,21 @@
     // Make text fields stretch to width of container.
     .text-field {
         width: 100%;
+    }
+
+    // Put text fields on same line on extra large devices.
+    @include mq(x-large) {
+
+        flex-wrap: nowrap;
+
+        // Add margin to first text field.
+        :nth-child(1) {
+            margin-right: 15px;
+        }
+
+        // Make text fields take up same space.
+        .text-field {
+            width: 50%;
+        }
     }
 }

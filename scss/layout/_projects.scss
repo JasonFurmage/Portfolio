@@ -39,8 +39,10 @@
     display: flex;
     flex-direction: column;
     margin-top: 30px; // Add vertical gap between projects.
+
+    // Add border with rounded corners.
     border: 1px solid $grey;
-    border-radius: 3px 3px 3px 3px; // Add rounded corners.
+    border-radius: 3px;
 }
 
 .project-body {

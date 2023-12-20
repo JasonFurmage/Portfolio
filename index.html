@@ -20,13 +20,21 @@
 </head>
 <body>
 
+    <!-- Burger Menu -->
+
+    <div class="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
     <header>
 
         <!-- Banner -->
 
         <div class="banner" id="top">
             <h1>My Name is Jason Furmage</h1>
-            <p>I'm a web developer.</p>
+            <p>I'm a web & software developer.</p>
             <div class="scroll-down">
                 Scroll Down
                 <a href="#portfolio"><i class="fa-solid fa-chevron-down"></i></a>
@@ -155,17 +163,34 @@
         <!-- Form -->
 
         <div class="container">
+            <div class="projects-heading" id="form">
+                <h2>Get in Touch</h2>
+            </div>
+        </div>
+
+        <div class="container">
             <form method="POST" action="#" accept-charset="UTF-8" class="form">
-                <h2>Contact Form</h2>
-                <p>If you're interested and would like to know more, please complete the form below and I'll be in touch shortly.</p>
-                <div class="name-wrapper">
-                    <input class="text-field" name="first_name" type="text" placeholder="First Name*">
-                    <input class="text-field" name="last_name" type="text" placeholder="Last Name*">
+                <div class="form-section">
+                <div class="form-info">
+                    <p>If you're interested and would like to know more, please complete the form below and I'll be in touch shortly.</p>
+                    <p>Alternatively, you can give me a call on:</p>
+                    <p><strong>07494240665</strong></p>
+                    <p>Or send me an email at:</p>
+                    <p><strong>jfurmage@me.com</strong></p>
                 </div>
-                <input class="text-field" name="email" type="email" placeholder="Email Address*">
-                <input class="text-field" name="subject" type="text" placeholder="Subject*">
-                <textarea class="text-area" name="message" placeholder="Message*"></textarea>
-                <input class="button" name="submit" type="Submit">
+                </div>
+                <div class="form-section">
+                <div class="form-input">
+                    <div class="name-wrapper">
+                        <input class="text-field" name="first_name" type="text" placeholder="First Name*">
+                        <input class="text-field" name="last_name" type="text" placeholder="Last Name*">
+                    </div>
+                    <input class="text-field" name="email" type="email" placeholder="Email Address*">
+                    <input class="text-field" name="subject" type="text" placeholder="Subject*">
+                    <textarea class="text-area" name="message" placeholder="Message*"></textarea>
+                    <input class="button" name="submit" type="Submit">
+                </div>
+                </div>
             </form>
         </div>
 
