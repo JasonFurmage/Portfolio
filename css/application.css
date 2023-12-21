@@ -34,33 +34,22 @@
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-}
-
-@media (min-width: 576px) {
-  /* line 1, ../../../GitHub/Portfolio/scss/components/_containers.scss */
-  .container {
-    width: 560px;
-  }
+  width: 100%;
+  max-width: 520px;
 }
 
 @media (min-width: 768px) {
   /* line 1, ../../../GitHub/Portfolio/scss/components/_containers.scss */
   .container {
-    width: 750px;
+    width: 97%;
+    max-width: 1410px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 1, ../../../GitHub/Portfolio/scss/components/_containers.scss */
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1260px) {
-  /* line 1, ../../../GitHub/Portfolio/scss/components/_containers.scss */
-  .container {
-    width: 1200px;
+  /* line 18, ../../../GitHub/Portfolio/scss/components/_containers.scss */
+  .content {
+    margin-left: 240px;
   }
 }
 
@@ -492,6 +481,43 @@ a {
   width: 40px;
   margin: 6px 0;
   background-color: #3498db;
+}
+
+/* The sidebar menu */
+/* line 2, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
+.sidebar {
+  height: 100%;
+  /* Full-height: remove this if you want "auto" height */
+  width: 240px;
+  /* Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #111;
+  /* Black */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+/* line 15, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+/* line 24, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
 /* line 1, ../../../GitHub/Portfolio/scss/layout/_banner.scss */

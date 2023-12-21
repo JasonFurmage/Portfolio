@@ -4,20 +4,20 @@
     padding-left: 15px;
     padding-right: 15px;
 
-    // Adjust container width according to screen size.
-    @include mq(small) {
-        width: $cont-width-sm;
-    }
+    // Width for small devices.
+    width: 100%;
+    max-width: 520px;
 
+    // Width for medium+ devices.
     @include mq(medium) {
-        width: $cont-width-md;
+        width: 97%;
+        max-width: 1410px;
     }
+}
 
+.content {
+    // Shift content to the right on large+ devices to account for sidebar.
     @include mq(large) {
-        width: $cont-width-lg;
-    }
-
-    @include mq(x-large) {
-        width: $cont-width-xl;
+        margin-left: 240px;
     }
 }
