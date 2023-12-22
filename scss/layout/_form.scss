@@ -1,9 +1,11 @@
 .form {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    
+    border-top: 1px solid $lighter-grey; // Create divider.
+    padding-top: 30px; // Create gap between divider and form.
 
-    // Put form info and inputs on same line on medium+ sized devices.
+    // Put sections on same line on medium+ devices.
     @include mq(medium) {
         flex-direction: row;
     }
@@ -13,69 +15,58 @@
     padding-left: 15px;
     padding-right: 15px;
 
+    // Give sections equal width.
     @include mq(medium) {
         width: 50%;
     }
 }
 
 .form-info {
-    // Indent content.
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
 
-    height: 100%;
+    padding: 10px; // Indent content.
     margin-bottom: 15px;
-
-    // Remove bottom margin on medium+ devices.
-    @include mq(medium) {
-        margin-bottom: 0px;
-    }
     
     // Add border with rounded corners.
-    border: 1px dotted $grey;
+    border: 1px dotted $light-grey;
     border-radius: 3px;
 
     p {
-        font-size: .875rem;
         text-align: left;
+        color: $dark-grey;
         margin-top: 0px;
     }
 
     strong {
-        color: $primary-color;
+        color: $dark-grey;
+    }
+
+    // Make height equal to input section and remove bottom margin on medium+ devices.
+    @include mq(medium) {
+        height: 100%;
+        margin-bottom: 0px;
     }
 }
 
 .form-input {
-    .text-field, .text-area {
-        font-size: .875rem;
+
+    // Create gap between each input field.
+    .text-field, .text-area, .button {
+        width: 100%;
         margin-bottom: 15px;
     }
 
     .text-area {
-        resize: none;
         height: 150px;
     }
 
     .button {
-        color: $white;
-        background-color: $primary-color;
-        border-color: $primary-color;
-        width: 100%;
+        text-transform: uppercase;
     }
 }
 
 .name-wrapper {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-
-    // Make text fields stretch to width of container.
-    .text-field {
-        width: 100%;
-    }
 
     // Put text fields on same line on extra large devices.
     @include mq(x-large) {

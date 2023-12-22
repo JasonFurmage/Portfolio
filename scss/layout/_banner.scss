@@ -1,19 +1,19 @@
 .banner {
+
+  height: 100vh; // Make banner height equal to view port height.
+
   // Center banner items.
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  // Make banner height equal to view port height.
-  height: 100vh;
-
-  background-color: $primary-color;
-  color: $white;
   padding: 20px;
 
   h1 {
-    text-align: center; // Center heading.
+    font-size: 64px;
+    text-align: center;
+    margin: 10px 0px;
   }
 }
 
@@ -28,8 +28,8 @@
   flex-direction: column;
   align-items: center;
 
-  // Make arrow white.
+  // Make arrow black.
   a {
-    color: $white;
+    color: $black;
   }
 }

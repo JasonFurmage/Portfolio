@@ -15,7 +15,7 @@
 
 .sidebar-header {
   border-bottom: 5px solid black; // Add devider between header and links.
-  background-color: $primary-color;
+  background-color: $black;
 
   // Center header text.
   display: flex;
@@ -36,7 +36,7 @@
     line-height: 3rem;
     padding: 6px 8px 6px 8px;
     border-bottom: 2.5px solid black; // Add divider between each link.
-    color: $primary-color;
+    color: $black;
     text-align: center;
     display: block; // Put links on seperate line.
   }
@@ -56,6 +56,6 @@
   // Set icon size and color.
   a {
     font-size: 2rem;
-    color: $primary-color;
+    color: $black;
   }
 }

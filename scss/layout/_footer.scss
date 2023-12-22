@@ -1,5 +1,5 @@
 footer {
-    color: $primary-color;
+    margin-top: 40px;
 }
 
 .scroll-up {
@@ -8,11 +8,10 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    padding-top: 7px;
-    margin-top: 30px;
     margin-bottom: 10px;
 
+    // Make arrow black.
     a {
-        color: $primary-color; // Make arrow primary color.
+        color: $black;
       }
 }
