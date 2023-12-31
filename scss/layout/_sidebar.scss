@@ -1,61 +1,44 @@
 .sidebar {
-  height: 100%;
-  width: 240px;
-  position: fixed; // Stay in place when scrolling.
-  overflow-x: hidden;
-  display: none; // Hide by default on small and medium devices
-  border-right: 5px solid black;
+    display: none; // Hide by default on small and medium devices
+    height: 100%;
+    width: 240px;
+    position: fixed; // Stay in place when scrolling.
+    border-right: 5px solid black;
 
-  // Show sidebar on large+ devices.
-  @include mq(large) {
-    display: flex;
-    flex-direction: column;
-  }
+    // Show sidebar on large+ devices.
+    @include mq(large) {
+      @include flex(column);
+    }
 }
 
 .sidebar-header {
-  border-bottom: 5px solid black; // Add devider between header and links.
-  background-color: $black;
+    text-align: center;
+    background-color: $black;
 
-  // Center header text.
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  a {
-    font-size: 7rem;
-    color: $white;
-  }
+    a {
+      @include text(112px, $color: $white);
+    }
 }
 
 .sidebar-links {
-  padding: 30px 15px;
+    padding: 30px 15px;
 
-  a {
-    font-size: 20px;
-    line-height: 3rem;
-    padding: 6px 8px 6px 8px;
-    border-bottom: 2.5px solid black; // Add divider between each link.
-    color: $black;
-    text-align: center;
-    display: block; // Put links on seperate line.
-  }
+    a {
+      display: block; // Put links on seperate line.
+      @include text(20px, center, $black, 48px);
+      border-bottom: 2.5px solid black; // Add divider between each link.
+      padding: 6px 8px 6px 8px;
+    }
 }
 
 .sidebar-social {
-  display: flex;
+    // Space icons evenly.
+    @include flex($justify-content: space-evenly);
+    
+    margin: auto 0px 2.5px 0px; // Pin social icons to the bottom of sidebar with small space beneath.
 
-  // Space icons evenly in row.
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-
-  margin-top: auto; // Pin social icons to the bottom of sidebar.
-  padding-bottom: 2.5px;
-
-  // Set icon size and color.
-  a {
-    font-size: 2rem;
-    color: $black;
-  }
+    // Set icon size and color.
+    a {
+      @include text(32px, $color: $black);
+    }
 }

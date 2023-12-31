@@ -33,8 +33,7 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0px 15px;
   width: 100%;
   max-width: 520px;
 }
@@ -48,7 +47,7 @@
 }
 
 @media (min-width: 992px) {
-  /* line 18, ../../../GitHub/Portfolio/scss/components/_containers.scss */
+  /* line 17, ../../../GitHub/Portfolio/scss/components/_containers.scss */
   .content {
     margin-left: 240px;
   }
@@ -441,17 +440,33 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
+  color: #757575;
   line-height: 1.5;
 }
 
-/* line 15, ../../../GitHub/Portfolio/scss/base/_base.scss */
+/* line 14, ../../../GitHub/Portfolio/scss/base/_base.scss */
 h2, h3 {
   font-weight: 400;
 }
 
-/* line 19, ../../../GitHub/Portfolio/scss/base/_base.scss */
+/* line 18, ../../../GitHub/Portfolio/scss/base/_base.scss */
 a {
   text-decoration: none;
+}
+
+/* line 1, ../../../GitHub/Portfolio/scss/layout/_misc.scss */
+.heading {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+/* line 7, ../../../GitHub/Portfolio/scss/layout/_misc.scss */
+.heading h2 {
+  font-size: 30px;
+  text-align: center;
+  color: #757575;
 }
 
 /* line 1, ../../../GitHub/Portfolio/scss/layout/_burger.scss */
@@ -460,7 +475,6 @@ a {
   right: 0;
   z-index: 1;
   font-size: 36px;
-  color: #757575;
   background-color: #ffffff;
   padding: 8px 16px;
   cursor: pointer;
@@ -475,11 +489,10 @@ a {
 
 /* line 1, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar {
+  display: none;
   height: 100%;
   width: 240px;
   position: fixed;
-  overflow-x: hidden;
-  display: none;
   border-right: 5px solid black;
 }
 
@@ -491,50 +504,44 @@ a {
   }
 }
 
-/* line 16, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 14, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-header {
-  border-bottom: 5px solid black;
+  text-align: center;
   background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-/* line 25, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 18, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-header a {
-  font-size: 7rem;
+  font-size: 112px;
   color: #ffffff;
 }
 
-/* line 31, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 23, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-links {
   padding: 30px 15px;
 }
 
-/* line 34, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 26, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-links a {
-  font-size: 20px;
-  line-height: 3rem;
-  padding: 6px 8px 6px 8px;
-  border-bottom: 2.5px solid black;
-  color: #000;
-  text-align: center;
   display: block;
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+  line-height: 48px;
+  border-bottom: 2.5px solid black;
+  padding: 6px 8px 6px 8px;
 }
 
-/* line 45, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 34, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-social {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
-  margin-top: auto;
-  padding-bottom: 2.5px;
+  margin: auto 0px 2.5px 0px;
 }
 
-/* line 57, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 41, ../../../GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-social a {
-  font-size: 2rem;
+  font-size: 32px;
   color: #000;
 }
 
@@ -543,19 +550,20 @@ a {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 20px;
+  color: #000;
 }
 
-/* line 13, ../../../GitHub/Portfolio/scss/layout/_banner.scss */
+/* line 10, ../../../GitHub/Portfolio/scss/layout/_banner.scss */
 .banner h1 {
   font-size: 64px;
   text-align: center;
   margin: 10px 0px;
 }
 
-/* line 20, ../../../GitHub/Portfolio/scss/layout/_banner.scss */
+/* line 16, ../../../GitHub/Portfolio/scss/layout/_banner.scss */
 .scroll-down {
   position: absolute;
   bottom: 20px;
@@ -564,92 +572,74 @@ a {
   align-items: center;
 }
 
-/* line 32, ../../../GitHub/Portfolio/scss/layout/_banner.scss */
+/* line 25, ../../../GitHub/Portfolio/scss/layout/_banner.scss */
 .scroll-down a {
   color: #000;
 }
 
 /* line 1, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
-.projects-heading {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-}
-
-/* line 6, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
-.projects-heading h2 {
-  font-size: 30px;
-  color: #757575;
-}
-
-/* line 12, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .projects {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #f1f1f1;
 }
 
 @media (min-width: 768px) {
-  /* line 12, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+  /* line 1, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
   .projects {
     flex-wrap: wrap;
     flex-direction: row;
   }
 }
 
-/* line 25, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 12, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .project-item-wrapper {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0px 15px;
+  margin-top: 30px;
 }
 
 @media (min-width: 768px) {
-  /* line 25, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+  /* line 12, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
   .project-item-wrapper {
     width: 50%;
   }
 }
 
 @media (min-width: 1260px) {
-  /* line 25, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+  /* line 12, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
   .project-item-wrapper {
     width: 33.33%;
   }
 }
 
-/* line 40, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 27, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .project-item {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  height: 100%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-/* line 47, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
-.project-item img {
-  filter: grayscale(1);
+/* line 32, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+.project-item .button {
+  align-self: center;
+  margin-bottom: 50px;
 }
 
-/* line 51, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
-.project-item img:hover {
-  filter: grayscale(0);
-}
-
-/* line 57, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 38, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .project-title {
   padding: 32px 0px;
   background-color: #000;
 }
 
-/* line 61, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 42, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .project-title h3 {
   font-size: 24px;
-  color: #ffffff;
   text-align: center;
+  color: #ffffff;
   margin: 0;
 }
 
-/* line 69, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 48, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
 .project-body {
   display: flex;
   flex-direction: column;
@@ -657,21 +647,10 @@ a {
   padding: 30px;
 }
 
-/* line 76, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
-.project-body p {
-  color: #757575;
-}
-
-/* line 80, ../../../GitHub/Portfolio/scss/layout/_projects.scss */
-.project-body .button {
-  margin: 20px 0px;
-}
-
 /* line 1, ../../../GitHub/Portfolio/scss/layout/_form.scss */
 .form {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #eee;
   padding-top: 30px;
 }
 
@@ -682,79 +661,81 @@ a {
   }
 }
 
-/* line 14, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+/* line 12, ../../../GitHub/Portfolio/scss/layout/_form.scss */
 .form-section {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0px 15px;
 }
 
 @media (min-width: 768px) {
-  /* line 14, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+  /* line 12, ../../../GitHub/Portfolio/scss/layout/_form.scss */
   .form-section {
     width: 50%;
   }
 }
 
-/* line 24, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+/* line 21, ../../../GitHub/Portfolio/scss/layout/_form.scss */
 .form-info {
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px dotted #f1f1f1;
-  border-radius: 3px;
 }
 
-/* line 33, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+/* line 25, ../../../GitHub/Portfolio/scss/layout/_form.scss */
 .form-info p {
-  text-align: left;
-  color: #757575;
   margin-top: 0px;
 }
 
-/* line 39, ../../../GitHub/Portfolio/scss/layout/_form.scss */
-.form-info strong {
-  color: #757575;
+/* line 29, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+.form-info i {
+  font-size: 32px;
+  margin-right: 15px;
 }
 
 @media (min-width: 768px) {
-  /* line 24, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+  /* line 21, ../../../GitHub/Portfolio/scss/layout/_form.scss */
   .form-info {
     height: 100%;
     margin-bottom: 0px;
   }
 }
 
-/* line 53, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+/* line 41, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+.form-contact {
+  display: flex;
+  align-items: center;
+}
+
+/* line 49, ../../../GitHub/Portfolio/scss/layout/_form.scss */
 .form-input .text-field, .form-input .text-area, .form-input .button {
   width: 100%;
   margin-bottom: 15px;
 }
 
-/* line 58, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+/* line 54, ../../../GitHub/Portfolio/scss/layout/_form.scss */
 .form-input .text-area {
   height: 150px;
 }
 
-/* line 62, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+/* line 58, ../../../GitHub/Portfolio/scss/layout/_form.scss */
 .form-input .button {
   text-transform: uppercase;
 }
 
-/* line 67, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+/* line 63, ../../../GitHub/Portfolio/scss/layout/_form.scss */
 .name-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
 
 @media (min-width: 1260px) {
-  /* line 67, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+  /* line 63, ../../../GitHub/Portfolio/scss/layout/_form.scss */
   .name-wrapper {
     flex-wrap: nowrap;
   }
-  /* line 77, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+  /* line 73, ../../../GitHub/Portfolio/scss/layout/_form.scss */
   .name-wrapper :nth-child(1) {
     margin-right: 15px;
   }
-  /* line 82, ../../../GitHub/Portfolio/scss/layout/_form.scss */
+  /* line 78, ../../../GitHub/Portfolio/scss/layout/_form.scss */
   .name-wrapper .text-field {
     width: 50%;
   }
@@ -763,9 +744,10 @@ a {
 /* line 1, ../../../GitHub/Portfolio/scss/layout/_footer.scss */
 footer {
   margin-top: 40px;
+  color: #000;
 }
 
-/* line 5, ../../../GitHub/Portfolio/scss/layout/_footer.scss */
+/* line 6, ../../../GitHub/Portfolio/scss/layout/_footer.scss */
 .scroll-up {
   display: flex;
   flex-direction: column;
@@ -773,9 +755,191 @@ footer {
   margin-bottom: 10px;
 }
 
-/* line 14, ../../../GitHub/Portfolio/scss/layout/_footer.scss */
+/* line 13, ../../../GitHub/Portfolio/scss/layout/_footer.scss */
 .scroll-up a {
   color: #000;
+}
+
+/* line 1, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+.scheme {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  /* line 1, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+  .scheme {
+    flex-direction: row;
+  }
+}
+
+/* line 11, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+.scheme-intro {
+  padding: 0px 15px;
+  margin-top: 30px;
+}
+
+/* line 15, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+.scheme-intro p {
+  text-align: justify;
+}
+
+/* line 20, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+.scheme-section-wrapper {
+  padding: 0px 15px;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  /* line 20, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+  .scheme-section-wrapper {
+    width: 50%;
+  }
+}
+
+/* line 30, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+.scheme-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* line 35, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+.scheme-section .heading {
+  border: 0px;
+  margin-top: 0px;
+}
+
+/* line 40, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+.scheme-section img {
+  width: 100%;
+  max-width: 200px;
+  align-self: center;
+}
+
+/* line 47, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+.scheme-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 30px;
+}
+
+/* line 52, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+.scheme-body p {
+  text-align: justify;
+}
+
+/* line 56, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+.scheme-body strong {
+  margin-top: auto;
+}
+
+/* line 60, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+.scheme-body ul {
+  padding-left: 20px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 1260px) {
+  /* line 47, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+  .scheme-body {
+    padding: 45px;
+  }
+}
+
+/* line 1, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+.about {
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  /* line 1, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+  .about {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1260px) {
+  /* line 1, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+  .about {
+    padding: 0px 45px;
+  }
+}
+
+/* line 18, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+.about-avatar-small {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+  align-self: center;
+  border: 3px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* line 29, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+.about-avatar-small img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  /* line 18, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+  .about-avatar-small {
+    display: none;
+  }
+}
+
+/* line 39, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+.about-avatar-big {
+  display: none;
+  border: 3px solid black;
+  margin: 30px 30px 0px 0px;
+}
+
+/* line 44, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+.about-avatar-big img {
+  max-width: 375px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  /* line 39, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+  .about-avatar-big {
+    display: flex;
+  }
+}
+
+/* line 55, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+.about-body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  text-align: justify;
+}
+
+/* line 60, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+.about-body a {
+  color: #757575;
+}
+
+/* line 65, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+.about-body :nth-child(1) {
+  margin-top: 0px;
+}
+
+/* line 70, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+.about-skills {
+  margin-top: 15px;
+}
+
+/* line 73, ../../../GitHub/Portfolio/scss/layout/_about.scss */
+.about-skills ul {
+  padding-left: 20px;
+  line-height: 2.0;
 }
 
 /*# sourceMappingURL=application.css.map */

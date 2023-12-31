@@ -1,0 +1,10 @@
+.heading {
+    @include flex($justify-content: center);
+    margin-top: 15px;
+
+    border-bottom: 1px solid $light-grey; // Add divider below heading.
+
+    h2 {
+        @include text(30px, center, $dark-grey);
+    }
+}

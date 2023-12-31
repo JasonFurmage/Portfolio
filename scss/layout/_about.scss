@@ -1,0 +1,77 @@
+.about {
+    padding: 0px 15px;
+
+    // Show avatar and body in a column on small devices.
+    @include flex(column);
+
+    // Show avatar and body in a row on medium+ devices.
+    @include mq(medium) {
+        flex-direction: row;
+    }
+
+    // Add some extra padding on x-large devices.
+    @include mq(x-large) {
+        padding: 0px 45px;
+    }
+}
+
+.about-avatar-small {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+    align-self: center;
+
+    // Make avatar a circle with a black border.
+    border: 3px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        width: 100%; // Make image fit circle.
+    }
+
+    // Hide small avatar on medium+ devices.
+    @include mq(medium) {
+        display: none;
+    }
+}
+
+.about-avatar-big {
+    display: none; // Hide big avatar on small devices.
+    border: 3px solid black;
+    margin: 30px 30px 0px 0px; // Add space between avatar, body and heading.
+
+    img {
+        max-width: 375px;
+        object-fit: cover; // Use fit to maintain aspect ratio while height changes.
+    }
+
+    // Show big avatar on medium+ devices.
+    @include mq(medium) {
+        display: flex;
+    }
+}
+
+.about-body {
+    @include flex(column);
+    margin-top: 30px;
+    text-align: justify;
+
+    a {
+        color: $dark-grey;
+    }
+
+    // Remove margin top on first paragraph.
+    :nth-child(1) {
+        margin-top: 0px;
+    }
+}
+
+.about-skills {
+    margin-top: 15px;
+
+    ul {
+        padding-left: 20px;
+        line-height: 2.0;
+    }
+}

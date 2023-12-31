@@ -1,35 +1,28 @@
 .banner {
+    height: 100vh; // Make banner height equal to view port height.
 
-  height: 100vh; // Make banner height equal to view port height.
+    // Center banner items.
+    @include flex(column, center, center);
 
-  // Center banner items.
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    padding: 20px;
+    color: $black;
 
-  padding: 20px;
-
-  h1 {
-    font-size: 64px;
-    text-align: center;
-    margin: 10px 0px;
-  }
+    h1 {
+      @include text(64px, center);
+      margin: 10px 0px;
+    }
 }
 
 .scroll-down {
+    // Put scroll down text 20px from bottom of banner.
+    position: absolute;
+    bottom: 20px;
 
-  // Put scroll down text 20px from bottom of banner.
-  position: absolute;
-  bottom: 20px;
-
-  // Center scroll down arrow.
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  // Make arrow black.
-  a {
-    color: $black;
-  }
+    // Center scroll down arrow.
+    @include flex(column, center);
+    
+    // Make arrow black.
+    a {
+      color: $black;
+    }
 }

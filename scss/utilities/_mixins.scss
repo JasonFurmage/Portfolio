@@ -22,3 +22,19 @@
         }
     }
 }
+
+// Set common flex properties.
+@mixin flex($flex-direction: null, $align-items: null, $justify-content: null) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+// Set common text properties.
+@mixin text($font-size: null, $text-align: null, $color: null, $line-height: null) {
+    font-size: $font-size;
+    text-align: $text-align;
+    color: $color;
+    line-height: $line-height;
+}

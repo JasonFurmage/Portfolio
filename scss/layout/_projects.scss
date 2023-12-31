@@ -1,19 +1,6 @@
-.projects-heading {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-
-    h2 {
-        font-size: 30px;
-        color: $dark-grey;
-    }
-}
-
 .projects {
-    display: flex;
-    flex-direction: column; // Show projects in single column on small devices.
-
-    border-top: 1px solid $light-grey; // Create divider for projects section.
+    // Show projects in single column on small devices.
+    @include flex(column);
 
     // Show projects in row on medium+ sized devices.
     @include mq(medium) {
@@ -23,8 +10,8 @@
 }
 
 .project-item-wrapper {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0px 15px;
+    margin-top: 30px; // Add vertical gap between projects.
 
     // Show two projects on each row on medium and large sized devices.
     @include mq(medium) {
@@ -38,19 +25,13 @@
 }
 
 .project-item {
-    display: flex;
-    flex-direction: column;
-
-    margin-top: 30px; // Add vertical gap between projects.
+    @include flex(column);
+    height: 100%; // Give all projects equal heights.
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12); // Add shadow around projects.
 
-    img {
-        filter: grayscale(1); // Make images black and white by default.
-
-        // Change images to color when hovering over them.
-        &:hover {
-            filter: grayscale(0);
-        }
+    .button {
+        align-self: center;
+        margin-bottom: 50px;
     }
 }
 
@@ -59,25 +40,12 @@
     background-color: $black;
 
     h3 {
-        font-size: 24px;
-        color: $white;
-        text-align: center;
+        @include text(24px, center, $white);
         margin: 0;
     }
 }
 
 .project-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    @include flex(column, center);
     padding: 30px; // Create padding around body contents.
-
-    p {
-        color: $dark-grey;
-    }
-
-    .button {
-        margin: 20px 0px;
-    }
 }

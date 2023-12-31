@@ -1,8 +1,6 @@
 .form {
-    display: flex;
-    flex-direction: column;
+    @include flex(column);
     
-    border-top: 1px solid $lighter-grey; // Create divider.
     padding-top: 30px; // Create gap between divider and form.
 
     // Put sections on same line on medium+ devices.
@@ -12,8 +10,7 @@
 }
 
 .form-section {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0px 15px;
 
     // Give sections equal width.
     @include mq(medium) {
@@ -22,22 +19,16 @@
 }
 
 .form-info {
-
     padding: 10px; // Indent content.
     margin-bottom: 15px;
-    
-    // Add border with rounded corners.
-    border: 1px dotted $light-grey;
-    border-radius: 3px;
 
     p {
-        text-align: left;
-        color: $dark-grey;
         margin-top: 0px;
     }
 
-    strong {
-        color: $dark-grey;
+    i {
+        font-size: 32px; // Set icon size.
+        margin-right: 15px; // Add space between icon and text.
     }
 
     // Make height equal to input section and remove bottom margin on medium+ devices.
@@ -45,6 +36,11 @@
         height: 100%;
         margin-bottom: 0px;
     }
+}
+
+.form-contact {
+    // Center icon and text.
+    @include flex($align-items: center);
 }
 
 .form-input {
