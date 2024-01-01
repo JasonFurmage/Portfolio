@@ -812,13 +812,17 @@ footer {
 }
 
 /* line 40, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
-.scheme-section img {
-  width: 100%;
-  max-width: 200px;
+.scheme-section a {
   align-self: center;
 }
 
-/* line 47, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+/* line 44, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+.scheme-section img {
+  width: 100%;
+  max-width: 200px;
+}
+
+/* line 50, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
 .scheme-body {
   display: flex;
   flex-direction: column;
@@ -826,24 +830,24 @@ footer {
   padding: 30px;
 }
 
-/* line 52, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+/* line 55, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
 .scheme-body p {
   text-align: justify;
 }
 
-/* line 56, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+/* line 59, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
 .scheme-body strong {
   margin-top: auto;
 }
 
-/* line 60, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+/* line 63, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
 .scheme-body ul {
   padding-left: 20px;
   margin-bottom: 0px;
 }
 
 @media (min-width: 1260px) {
-  /* line 47, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
+  /* line 50, ../../../GitHub/Portfolio/scss/layout/_scheme.scss */
   .scheme-body {
     padding: 45px;
   }

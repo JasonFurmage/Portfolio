@@ -37,10 +37,13 @@
         margin-top: 0px;
     }
 
+    a {
+        align-self: center; // Center logo.
+    }
+
     img {
         width: 100%;
         max-width: 200px;
-        align-self: center;
     }
 }
 
