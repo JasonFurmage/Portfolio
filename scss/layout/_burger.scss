@@ -13,4 +13,10 @@
     @include mq(large) {
         display: none;
     }
+    
+    // Change burger background and line colors on hover.
+    &:hover {
+        background-color: $grey;
+        i {color: black; }
+    }
 }

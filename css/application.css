@@ -487,6 +487,16 @@ a {
   }
 }
 
+/* line 18, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_burger.scss */
+.burger:hover {
+  background-color: #ccc;
+}
+
+/* line 20, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_burger.scss */
+.burger:hover i {
+  color: black;
+}
+
 /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar {
   display: none;
