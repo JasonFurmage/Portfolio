@@ -514,8 +514,8 @@ a {
   .sidebar {
     display: flex;
     flex-direction: column;
-    visibility: visible;
-    width: 240px;
+    visibility: visible !important;
+    width: 240px !important;
   }
 }
 

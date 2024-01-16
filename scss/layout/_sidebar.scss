@@ -13,8 +13,8 @@
   // Show sidebar on large+ devices.
   @include mq(large) {
     @include flex(column);
-    visibility: visible;
-    width: 240px;
+    visibility: visible!important;
+    width: 240px!important;
   }
 }
 
