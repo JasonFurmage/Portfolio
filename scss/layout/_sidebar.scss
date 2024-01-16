@@ -28,6 +28,7 @@
       @include text(20px, center, $black, 48px);
       border-bottom: 2.5px solid black; // Add divider between each link.
       padding: 6px 8px 6px 8px;
+      white-space: nowrap; // Prevents links from wrapping to next line.
     }
 }
 

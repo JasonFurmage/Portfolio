@@ -530,16 +530,17 @@ a {
   line-height: 48px;
   border-bottom: 2.5px solid black;
   padding: 6px 8px 6px 8px;
+  white-space: nowrap;
 }
 
-/* line 34, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 35, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-social {
   display: flex;
   justify-content: space-evenly;
   margin: auto 0px 2.5px 0px;
 }
 
-/* line 41, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 42, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-social a {
   font-size: 32px;
   color: #000;
