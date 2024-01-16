@@ -15,4 +15,15 @@ function showBannerHeadings() {
   }
 }
 
+let sidebarVisible = false;
+
+function toggleSideBar() {
+
+  sidebarVisible = !sidebarVisible; // Check if sidebar is currently on screen.
+
+  // Toggle visibility and width.
+  document.getElementById("js-sidebar").style.visibility = sidebarVisible ? "visible" : "hidden" ;
+  document.getElementById("js-sidebar").style.width = sidebarVisible ? "240px" : "0" ;
+}
+
 showBannerHeadings();
