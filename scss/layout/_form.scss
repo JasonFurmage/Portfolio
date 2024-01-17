@@ -42,6 +42,7 @@
     // Center icon and text.
     @include flex($align-items: center);
 
+    // Add underline to contact links.
     a {
         color: $dark-grey;
         &:hover { text-decoration: underline; }
