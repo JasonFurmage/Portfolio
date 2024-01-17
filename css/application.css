@@ -507,6 +507,7 @@ a {
   background-color: #ffffff;
   border-right: 5px solid black;
   overflow-x: hidden;
+  z-index: 1;
 }
 
 @media (min-width: 992px) {
@@ -519,24 +520,24 @@ a {
   }
 }
 
-/* line 21, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 22, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-header {
   text-align: center;
   background-color: #000;
 }
 
-/* line 25, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 26, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-header a {
   font-size: 112px;
   color: #ffffff;
 }
 
-/* line 30, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 31, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-links {
   padding: 30px 15px;
 }
 
-/* line 33, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 34, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-links a {
   display: block;
   font-size: 20px;
@@ -549,13 +550,18 @@ a {
 }
 
 /* line 42, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+.sidebar-links a :hover {
+  text-decoration: underline;
+}
+
+/* line 48, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-social {
   display: flex;
   justify-content: space-evenly;
   margin: auto 0px 2.5px 0px;
 }
 
-/* line 49, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 55, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-social a {
   font-size: 32px;
   color: #000;

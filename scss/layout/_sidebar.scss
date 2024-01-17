@@ -9,6 +9,7 @@
   background-color: $white;
   border-right: 5px solid black;
   overflow-x: hidden;
+  z-index: 1; // Stay on top of content.
 
   // Show sidebar on large+ devices.
   @include mq(large) {
@@ -36,6 +37,11 @@
     border-bottom: 2.5px solid black; // Add divider between each link.
     padding: 6px 8px 6px 8px;
     white-space: nowrap; // Prevents links from wrapping to next line.
+
+    // Underline links on hover.
+    :hover {
+      text-decoration: underline;
+    }
   }
 }
 
