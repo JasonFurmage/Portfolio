@@ -586,6 +586,11 @@ a {
 }
 
 /* line 16, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_banner.scss */
+.banner p {
+  margin-bottom: 55px;
+}
+
+/* line 21, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_banner.scss */
 .scroll-down {
   position: absolute;
   bottom: 20px;
@@ -594,7 +599,7 @@ a {
   align-items: center;
 }
 
-/* line 25, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_banner.scss */
+/* line 30, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_banner.scss */
 .scroll-down a {
   color: #000;
 }
