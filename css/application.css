@@ -501,7 +501,7 @@ a {
 .sidebar {
   visibility: hidden;
   width: 0;
-  transition: 0.5s;
+  transition: 0.4s;
   height: 100%;
   position: fixed;
   background-color: #ffffff;
