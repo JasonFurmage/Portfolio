@@ -41,6 +41,11 @@
 .form-contact {
     // Center icon and text.
     @include flex($align-items: center);
+
+    a {
+        color: $dark-grey;
+        &:hover { text-decoration: underline; }
+    }
 }
 
 .form-input {

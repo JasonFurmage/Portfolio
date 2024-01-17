@@ -731,38 +731,48 @@ a {
   align-items: center;
 }
 
-/* line 49, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+/* line 45, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+.form-contact a {
+  color: #757575;
+}
+
+/* line 47, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+.form-contact a:hover {
+  text-decoration: underline;
+}
+
+/* line 54, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
 .form-input .text-field, .form-input .text-area, .form-input .button {
   width: 100%;
   margin-bottom: 15px;
 }
 
-/* line 54, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+/* line 59, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
 .form-input .text-area {
   height: 150px;
 }
 
-/* line 58, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+/* line 63, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
 .form-input .button {
   text-transform: uppercase;
 }
 
-/* line 63, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+/* line 68, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
 .name-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
 
 @media (min-width: 1260px) {
-  /* line 63, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+  /* line 68, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
   .name-wrapper {
     flex-wrap: nowrap;
   }
-  /* line 73, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+  /* line 78, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
   .name-wrapper :nth-child(1) {
     margin-right: 15px;
   }
-  /* line 78, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+  /* line 83, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
   .name-wrapper .text-field {
     width: 50%;
   }
