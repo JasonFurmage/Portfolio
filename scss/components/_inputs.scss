@@ -10,3 +10,8 @@
         border-radius: 2px;
     }
 }
+
+.error {
+    border-color: $error-red;
+    transition: 1s;
+}

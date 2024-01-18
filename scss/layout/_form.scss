@@ -49,21 +49,13 @@
     }
 }
 
-.form-input {
-
-    // Create gap between each input field.
-    .text-field, .text-area, .button {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .text-area {
-        height: 150px;
-    }
-
-    .button {
-        text-transform: uppercase;
-    }
+.form-error {
+    display: none;
+    color: $white;
+    background-color: $error-red;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 20px;
 }
 
 .name-wrapper {
@@ -81,8 +73,27 @@
         }
 
         // Make text fields take up same space.
-        .text-field {
+        .form-group {
             width: 50%;
         }
+    }
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+
+    // Make each input field fill group container and add gap below.
+    .text-field, .text-area, .button {
+        width: 100%;
+    }
+
+    .text-area {
+        height: 150px;
+    }
+
+    .button {
+        line-height: 1.5;
+        text-transform: uppercase;
     }
 }

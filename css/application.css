@@ -29,6 +29,12 @@
   border-radius: 2px;
 }
 
+/* line 14, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/components/_inputs.scss */
+.error {
+  border-color: #ff6961;
+  transition: 1s;
+}
+
 /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/components/_containers.scss */
 .container {
   margin-left: auto;
@@ -741,41 +747,57 @@ a {
   text-decoration: underline;
 }
 
-/* line 55, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
-.form-input .text-field, .form-input .text-area, .form-input .button {
-  width: 100%;
+/* line 52, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+.form-error {
+  display: none;
+  color: #ffffff;
+  background-color: #ff6961;
+  text-align: center;
   margin-bottom: 15px;
+  padding: 20px;
 }
 
-/* line 60, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
-.form-input .text-area {
-  height: 150px;
-}
-
-/* line 64, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
-.form-input .button {
-  text-transform: uppercase;
-}
-
-/* line 69, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+/* line 61, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
 .name-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
 
 @media (min-width: 1260px) {
-  /* line 69, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+  /* line 61, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
   .name-wrapper {
     flex-wrap: nowrap;
   }
-  /* line 79, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+  /* line 71, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
   .name-wrapper :nth-child(1) {
     margin-right: 15px;
   }
-  /* line 84, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
-  .name-wrapper .text-field {
+  /* line 76, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+  .name-wrapper .form-group {
     width: 50%;
   }
+}
+
+/* line 82, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* line 87, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+.form-group .text-field, .form-group .text-area, .form-group .button {
+  width: 100%;
+}
+
+/* line 91, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+.form-group .text-area {
+  height: 150px;
+}
+
+/* line 95, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
+.form-group .button {
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_footer.scss */
