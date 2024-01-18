@@ -4,10 +4,9 @@
     border: 1px solid $grey;
     resize: none;
 
-    // Highlight input field when active.
+    // Replace default outline color with black
     &:focus {
-        border-color: $black;
-        border-radius: 2px;
+        outline-color: $black;
     }
 }
 
