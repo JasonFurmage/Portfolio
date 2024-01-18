@@ -69,10 +69,11 @@ function validateForm() {
     formErrorEl.fadeIn(1000);
 
   } else {
+    formErrorEl.hide;
     alert("Your message has been sent.")
   }
 
-  return isFormValid;
+  return false; // Set to false when testing to prevent page refresh (otherwise use isFormValid).
 }
 
 function isValid(input) {
