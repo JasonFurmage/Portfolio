@@ -5,10 +5,19 @@
     resize: none;
 
     // Replace default outline color with black
-    &:focus {
-        outline-color: $black;
-        -webkit-appearance: none;
-    }
+    // &:focus {
+    //     outline-color: $black;
+    // }
+
+    /* Remove outline for non-keyboard :focus */
+*:focus:not(.focus-visible) {
+    outline: none;
+  }
+  
+  /* Optional: Customize .focus-visible */
+  .focus-visible {
+    outline-color: lightgreen;
+  }
 }
 
 .error {

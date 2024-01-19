@@ -21,15 +21,21 @@
   padding: 16px 8px;
   border: 1px solid #ccc;
   resize: none;
+  /* Remove outline for non-keyboard :focus */
+  /* Optional: Customize .focus-visible */
 }
 
-/* line 8, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/components/_inputs.scss */
-.text-field:focus, .text-area:focus {
-  outline-color: #000;
-  -webkit-appearance: none;
+/* line 13, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/components/_inputs.scss */
+.text-field *:focus:not(.focus-visible), .text-area *:focus:not(.focus-visible) {
+  outline: none;
 }
 
-/* line 14, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/components/_inputs.scss */
+/* line 18, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/components/_inputs.scss */
+.text-field .focus-visible, .text-area .focus-visible {
+  outline-color: lightgreen;
+}
+
+/* line 23, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/components/_inputs.scss */
 .error {
   border-color: #ff6961;
   transition: 1s;
