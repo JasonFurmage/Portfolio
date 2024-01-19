@@ -29,6 +29,11 @@
     height: 100%; // Give all projects equal heights.
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12); // Add shadow around projects.
 
+    // Make shadow bigger on hover.
+    &:hover {
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    }
+
     .button {
         align-self: center;
         margin-bottom: 50px;
