@@ -475,31 +475,46 @@ a {
 }
 
 /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_burger.scss */
-.burger {
+.hamburger {
   position: fixed;
-  right: 0;
+  top: 13px;
+  right: 13px;
   z-index: 1;
-  font-size: 36px;
-  background-color: #ffffff;
   padding: 8px 16px;
+  background-color: #000;
+  color: #ffffff;
   cursor: pointer;
 }
 
 @media (min-width: 992px) {
   /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_burger.scss */
-  .burger {
+  .hamburger {
     display: none;
   }
 }
 
-/* line 18, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_burger.scss */
-.burger:hover {
-  background-color: #ccc;
+/* line 20, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_burger.scss */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-7.5px, 9px);
 }
 
-/* line 20, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_burger.scss */
-.burger:hover i {
-  color: black;
+/* line 21, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_burger.scss */
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+/* line 22, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_burger.scss */
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-7.5px, -9px);
+}
+
+/* line 26, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_burger.scss */
+.bar {
+  height: 3px;
+  width: 30px;
+  background-color: #ffffff;
+  margin: 9px 0px;
+  transition: 0.4s;
 }
 
 /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */

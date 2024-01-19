@@ -22,7 +22,7 @@ showBannerHeadings();
 
 /* Toggle Sidebar
    ========================================================================== */
-
+  
 let sidebarVisible = false;
 
 function toggleSideBar() {
@@ -34,8 +34,23 @@ function toggleSideBar() {
   $("#js-sidebar").css("width", sidebarVisible ? "240px" : "0");
 }
 
+// Set hamburger to active for animation and toggle sidebar.
+$(document).ready(function() {
+  $('.hamburger').on('click', function() {
+    $(this).toggleClass('active');
+    toggleSideBar();
+  });
+});
+
 /* Form Validation
    ========================================================================== */
+
+var selectedInputs = $('.text-field, .text-area');
+
+// Remove error class from input fields on focus.
+selectedInputs.on('focus', function() {
+  $(this).removeClass("error");
+});
 
 let errorMessage;
 

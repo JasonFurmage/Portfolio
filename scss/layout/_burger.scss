@@ -1,22 +1,32 @@
-.burger {
-    // Fix burger to top right.
-    position: fixed;
-    right: 0;
-    z-index: 1;
+.hamburger {
+  // Fix hamburger to top right.
+  position: fixed;
+  top: 13px;
+  right: 13px;
+  z-index: 1;
 
-    font-size: 36px; // Adjust burger size.
-    background-color: $white;
-    padding: 8px 16px;
-    cursor: pointer;
+  padding: 8px 16px;
+  background-color: $black;
+  color: $white;
+  cursor: pointer;
 
-    // Hide burger menu on large+ devices.
-    @include mq(large) {
-        display: none;
-    }
-    
-    // Change burger background and line colors on hover.
-    &:hover {
-        background-color: $grey;
-        i {color: black; }
-    }
+  // Hide burger menu on large+ devices.
+  @include mq(large) {
+    display: none;
+  }
+
+  // Turn hamburger bars into X when active.
+  &.active {
+    .bar:nth-child(1) { transform: rotate(-45deg) translate(-7.5px, 9px); }
+    .bar:nth-child(2) { opacity: 0; }
+    .bar:nth-child(3) { transform: rotate(45deg) translate(-7.5px, -9px); }
+  }
+}
+
+.bar {
+  height: 3px; // Bar thickness.
+  width: 30px;
+  background-color: $white;
+  margin: 9px 0px; // Gap between each bar.
+  transition: 0.4s;
 }
