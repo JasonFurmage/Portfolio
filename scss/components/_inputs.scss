@@ -7,10 +7,7 @@
     // Replace default outline color with black
     &:focus {
         outline-color: $black;
-    }
-
-    &:focus-visible {
-        outline-color: $black;
+        -webkit-appearance: none;
     }
 }
 
