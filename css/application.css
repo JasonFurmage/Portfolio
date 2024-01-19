@@ -25,10 +25,15 @@
 
 /* line 8, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/components/_inputs.scss */
 .text-field:focus, .text-area:focus {
-  outline: 0;
+  outline-color: #000;
 }
 
-/* line 14, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/components/_inputs.scss */
+/* line 12, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/components/_inputs.scss */
+.text-field:focus-visible, .text-area:focus-visible {
+  outline-color: #000;
+}
+
+/* line 17, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/components/_inputs.scss */
 .error {
   border-color: #ff6961;
   transition: 1s;
