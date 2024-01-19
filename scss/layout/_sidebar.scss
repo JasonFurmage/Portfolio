@@ -1,4 +1,6 @@
 .sidebar {
+  @include flex(column);
+
   // Hide by default on small and medium devices.
   visibility: hidden;
   width: 0;
@@ -13,7 +15,6 @@
 
   // Show sidebar on large+ devices.
   @include mq(large) {
-    @include flex(column);
     visibility: visible!important;
     width: 240px!important;
   }

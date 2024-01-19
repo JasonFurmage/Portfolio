@@ -522,6 +522,8 @@ a {
 
 /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar {
+  display: flex;
+  flex-direction: column;
   visibility: hidden;
   width: 0;
   transition: 0.4s;
@@ -536,31 +538,29 @@ a {
 @media (min-width: 992px) {
   /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
   .sidebar {
-    display: flex;
-    flex-direction: column;
     visibility: visible !important;
     width: 240px !important;
   }
 }
 
-/* line 22, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 23, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-header {
   text-align: center;
   background-color: #000;
 }
 
-/* line 26, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 27, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-header a {
   font-size: 112px;
   color: #ffffff;
 }
 
-/* line 31, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 32, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-links {
   padding: 30px 15px;
 }
 
-/* line 34, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 35, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-links a {
   display: block;
   font-size: 20px;
@@ -572,19 +572,19 @@ a {
   white-space: nowrap;
 }
 
-/* line 42, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 43, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-links a :hover {
   text-decoration: underline;
 }
 
-/* line 48, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 49, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-social {
   display: flex;
   justify-content: space-evenly;
   margin: auto 0px 2.5px 0px;
 }
 
-/* line 55, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
+/* line 56, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_sidebar.scss */
 .sidebar-social a {
   font-size: 32px;
   color: #000;
