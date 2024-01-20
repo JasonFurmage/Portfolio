@@ -27,11 +27,14 @@
 .project-item {
     @include flex(column);
     height: 100%; // Give all projects equal heights.
+    border: 1px solid $grey;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12); // Add shadow around projects.
+    transition: .3s ease;
 
     // Make shadow bigger on hover.
     &:hover {
         box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+        transition: .3s ease;
     }
 
     .button {
@@ -41,7 +44,7 @@
 }
 
 .project-title {
-    padding: 32px 0px;
+    padding: 32px 15px;
     background-color: $black;
 
     h3 {
