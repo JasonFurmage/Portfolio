@@ -677,19 +677,13 @@ a {
   transition: .3s ease;
 }
 
-/* line 40, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_projects.scss */
-.project-item .button {
-  align-self: center;
-  margin-bottom: 50px;
-}
-
-/* line 46, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 41, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_projects.scss */
 .project-title {
   padding: 32px 15px;
   background-color: #000;
 }
 
-/* line 50, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 45, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_projects.scss */
 .project-title h3 {
   font-size: 24px;
   text-align: center;
@@ -697,12 +691,26 @@ a {
   margin: 0;
 }
 
-/* line 56, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_projects.scss */
+/* line 51, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_projects.scss */
 .project-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px;
+  text-align: center;
+}
+
+/* line 57, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_projects.scss */
+.project-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto 0 30px 0;
+}
+
+/* line 62, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_projects.scss */
+.project-buttons .button {
+  width: 40%;
+  max-width: 150px;
 }
 
 /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
