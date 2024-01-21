@@ -654,7 +654,7 @@ a {
   }
 }
 
-@media (min-width: 1260px) {
+@media (min-width: 1330px) {
   /* line 12, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_projects.scss */
   .project-item-wrapper {
     width: 33.33%;
@@ -796,7 +796,7 @@ a {
   flex-wrap: wrap;
 }
 
-@media (min-width: 1260px) {
+@media (min-width: 1330px) {
   /* line 61, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_form.scss */
   .name-wrapper {
     flex-wrap: nowrap;
@@ -938,7 +938,7 @@ footer {
   margin-bottom: 0px;
 }
 
-@media (min-width: 1260px) {
+@media (min-width: 1330px) {
   /* line 50, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_scheme.scss */
   .scheme-body {
     padding: 45px;
@@ -959,7 +959,7 @@ footer {
   }
 }
 
-@media (min-width: 1260px) {
+@media (min-width: 1330px) {
   /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Portfolio/scss/layout/_about.scss */
   .about {
     padding: 0px 45px;
