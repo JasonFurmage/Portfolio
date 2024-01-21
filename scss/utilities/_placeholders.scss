@@ -1,0 +1,6 @@
+%underline-links-on-hover {
+    a {
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
+    }
+}

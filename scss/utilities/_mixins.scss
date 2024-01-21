@@ -1,26 +1,9 @@
 // Simplify media queries. 
 @mixin mq($break) {
-    @if $break == "small" {
-        @media #{$brkpoint-sm} {
-            @content;
-        }
-    }
-    @else if $break == "medium" {
-        @media #{$brkpoint-md} {
-            @content;
-        }
-    }
-
-    @else if $break == "large" {
-        @media #{$brkpoint-lg} {
-            @content;
-        }
-    }
-    @else if $break == "x-large" {
-        @media #{$brkpoint-xl} {
-            @content;
-        }
-    }
+    @if $break == "small" { @media #{$brkpoint-sm} { @content; } }
+    @else if $break == "medium" { @media #{$brkpoint-md} { @content; } }
+    @else if $break == "large" { @media #{$brkpoint-lg} { @content; } }
+    @else if $break == "x-large" { @media #{$brkpoint-xl} { @content; } }
 }
 
 // Set common flex properties.
@@ -37,4 +20,20 @@
     text-align: $text-align;
     color: $color;
     line-height: $line-height;
+}
+
+// Set common button properties.
+@mixin button($color: null, $background-color: null, $hover-color: null) {
+    display: inline-block;
+    height: auto;
+    border: none;
+    text-align: center;
+    color: $color;
+    background-color: $background-color;
+    padding: 12px 24px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hover-color;
+    }
 }

@@ -45,7 +45,7 @@ $(document).ready(function() {
 /* Form Validation
    ========================================================================== */
 
-var selectedInputs = $('.text-field, .text-area');
+var selectedInputs = $('.form-text-field, .form-text-area');
 
 // Remove error class from input fields on focus.
 selectedInputs.on('focus', function() {

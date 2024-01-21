@@ -9,7 +9,7 @@
     }
 }
 
-.form-section {
+.form_section {
     padding: 0px 15px;
 
     // Give sections equal width.
@@ -18,7 +18,7 @@
     }
 }
 
-.form-info {
+.form_info {
     padding: 10px; // Indent content.
     margin-bottom: 15px;
 
@@ -38,7 +38,7 @@
     }
 }
 
-.form-contact {
+.form_contact {
     // Center icon and text.
     @include flex($align-items: center);
 
@@ -49,7 +49,7 @@
     }
 }
 
-.form-error {
+.form_error {
     display: none;
     color: $white;
     background-color: $error-red;
@@ -58,7 +58,7 @@
     padding: 20px;
 }
 
-.name-wrapper {
+.form_name-wrapper {
     display: flex;
     flex-wrap: wrap;
 
@@ -79,20 +79,20 @@
     }
 }
 
-.form-group {
+.form_group {
     width: 100%;
     margin-bottom: 15px;
 
     // Make each input field fill group container and add gap below.
-    .text-field, .text-area, .button {
+    .form-text-field, .form-text-area, .form-submit-button {
         width: 100%;
     }
 
-    .text-area {
+    .form-text-area {
         height: 150px;
     }
 
-    .button {
+    .form-submit-button {
         line-height: 1.5;
         text-transform: uppercase;
     }

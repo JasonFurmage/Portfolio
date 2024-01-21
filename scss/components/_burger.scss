@@ -17,13 +17,13 @@
 
   // Turn hamburger bars into X when active.
   &.active {
-    .bar:nth-child(1) { transform: rotate(-45deg) translate(-7.5px, 9px); }
-    .bar:nth-child(2) { opacity: 0; }
-    .bar:nth-child(3) { transform: rotate(45deg) translate(-7.5px, -9px); }
+    .hamburger-bar:nth-child(1) { transform: rotate(-45deg) translate(-7.5px, 9px); }
+    .hamburger-bar:nth-child(2) { opacity: 0; }
+    .hamburger-bar:nth-child(3) { transform: rotate(45deg) translate(-7.5px, -9px); }
   }
 }
 
-.bar {
+.hamburger-bar {
   height: 3px; // Bar thickness.
   width: 30px;
   background-color: $white;

@@ -9,7 +9,7 @@
     }
 }
 
-.project-item-wrapper {
+.project_item-wrapper {
     padding: 0px 15px;
     margin-top: 30px; // Add vertical gap between projects.
 
@@ -24,7 +24,7 @@
     }
 }
 
-.project-item {
+.project_item {
     @include flex(column);
     height: 100%; // Give all projects equal heights.
     border: 1px solid $grey;
@@ -38,7 +38,7 @@
     }
 }
 
-.project-title {
+.project_title {
     padding: 32px 15px;
     background-color: $black;
 
@@ -48,18 +48,18 @@
     }
 }
 
-.project-body {
+.project_body {
     @include flex(column, center);
     padding: 30px; // Create padding around body contents.
     text-align: center;
 }
 
-.project-buttons {
+.project_buttons {
     // Space buttons evenly
     @include flex($justify-content: space-evenly);
     margin: auto 0 30px 0;
 
-    .button {
+    .project-button {
         width: 40%; // Allows buttons to grow and shrink according to screen size.
         max-width: 150px;
     }

@@ -3,7 +3,7 @@ footer {
     color: $black;
 }
 
-.scroll-up {
+.footer_scroll-up {
     // Center scroll up arrow.
     @include flex(column, center);
 

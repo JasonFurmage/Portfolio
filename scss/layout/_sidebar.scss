@@ -9,7 +9,7 @@
   height: 100%;
   position: fixed; // Stay in place when scrolling.
   background-color: $white;
-  border-right: 5px solid black;
+  border-right: 5px solid $black;
   overflow-x: hidden;
   z-index: 1; // Stay on top of content.
 
@@ -20,7 +20,7 @@
   }
 }
 
-.sidebar-header {
+.sidebar_header {
   text-align: center;
   background-color: $black;
 
@@ -29,24 +29,20 @@
   }
 }
 
-.sidebar-links {
+.sidebar_links {
+  @extend %underline-links-on-hover;
   padding: 30px 15px;
 
   a {
     display: block; // Put links on seperate line.
     @include text(20px, center, $black, 48px);
-    border-bottom: 2.5px solid black; // Add divider between each link.
+    border-bottom: 2.5px solid $black; // Add divider between each link.
     padding: 6px 8px 6px 8px;
     white-space: nowrap; // Prevents links from wrapping to next line.
-
-    // Underline links on hover.
-    :hover {
-      text-decoration: underline;
-    }
   }
 }
 
-.sidebar-social {
+.sidebar_social {
   // Space icons evenly.
   @include flex($justify-content: space-evenly);
   

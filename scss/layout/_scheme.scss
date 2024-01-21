@@ -8,7 +8,7 @@
     }
 }
 
-.scheme-intro {
+.scheme_intro {
     padding: 0px 15px;
     margin-top: 30px;
 
@@ -17,7 +17,7 @@
     }
 }
 
-.scheme-section-wrapper {
+.scheme_section-wrapper {
     padding: 0px 15px;
     margin-top: 30px; // Add vertical spacing between scheme sections.
 
@@ -27,7 +27,7 @@
     }
 }
 
-.scheme-section {
+.scheme_section {
     @include flex(column);
     height: 100%; // Give scheme sections equal height.
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12); // Add shadow around scheme sections.
@@ -47,7 +47,7 @@
     }
 }
 
-.scheme-body {
+.scheme_body {
     @include flex(column);
     height: 100%; // Give scheme bodies equal height.
     padding: 30px; // Add padding around body.
