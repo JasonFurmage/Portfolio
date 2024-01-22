@@ -8,8 +8,7 @@
 
   height: 100%;
   position: fixed; // Stay in place when scrolling.
-  background-color: $white;
-  border-right: 5px solid $black;
+  background-color: $black;
   overflow-x: hidden;
   z-index: 1; // Stay on top of content.
 
@@ -21,24 +20,27 @@
 }
 
 .sidebar_header {
-  text-align: center;
+  @include text(112px, $text-align: center, $color: $white);
   background-color: $black;
+  padding: 0px 15px;
+}
 
-  a {
-    @include text(112px, $color: $white);
-  }
+.sidebar-divider {
+  height: 2px;
+  width: 200px;
+  background-color: $white;
+  align-self: center;
 }
 
 .sidebar_links {
-  @extend %underline-links-on-hover;
   padding: 30px 15px;
 
   a {
     display: block; // Put links on seperate line.
-    @include text(20px, center, $black, 48px);
-    border-bottom: 2.5px solid $black; // Add divider between each link.
+    @include text(20px, center, $dark-grey, 48px);
     padding: 6px 8px 6px 8px;
     white-space: nowrap; // Prevents links from wrapping to next line.
+    :hover { color: $light-grey; }
   }
 }
 
@@ -50,6 +52,7 @@
 
   // Set icon size and color.
   a {
-    @include text(32px, $color: $black);
+    @include text(32px, $color: $dark-grey);
+    :hover { color: $light-grey; }
   }
 }
