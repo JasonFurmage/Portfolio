@@ -45,6 +45,13 @@ $(document).ready(function() {
 /* Form Validation
    ========================================================================== */
 
+// Get input fields.
+const firstNameEl = $("#js-form input[name='first_name']");
+const lastNameEl = $("#js-form input[name='last_name']");
+const emailEl = $("#js-form input[name='email']");
+const subjectEl = $("#js-form input[name='subject']");
+const messageEl = $("#js-form textarea[name='message']");
+
 var selectedInputs = $('.form-text-field, .form-text-area');
 
 // Remove error class from input fields on focus.
@@ -59,13 +66,6 @@ function validateForm() {
   let isFormValid = false;
   let formErrorEl = $('#js-error'); // Div for displaying error message.
   formErrorEl.hide(); // Hide initially to give feedback whenever submit button is clicked.
-
-  // Get input fields.
-  const firstNameEl = $("#js-form input[name='first_name']");
-  const lastNameEl = $("#js-form input[name='last_name']");
-  const emailEl = $("#js-form input[name='email']");
-  const subjectEl = $("#js-form input[name='subject']");
-  const messageEl = $("#js-form textarea[name='message']");
 
   // Check if values are valid.
   isEmailValid = isValid(emailEl);
@@ -85,7 +85,8 @@ function validateForm() {
 
   } else {
     formErrorEl.hide;
-    alert("Your message has been sent.")
+    alert("Your message has been sent (not really).")
+    clearFields();
   }
 
   return false; // Set to false when testing to prevent page refresh (otherwise use isFormValid).
@@ -124,4 +125,13 @@ function isValidEmail(value) {
 // Check if string is empty.
 function isEmpty(value) {
   return value === '';
+}
+
+// Clear all inputs fields
+function clearFields() {
+  firstNameEl.val("");
+  lastNameEl.val("");
+  emailEl.val("");
+  subjectEl.val("");
+  messageEl.val("");
 }
