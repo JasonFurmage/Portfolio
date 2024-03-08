@@ -72,9 +72,19 @@
   background-color: #ccc;
 }
 
-.error {
+.invalid {
   border-color: #ff6961;
   transition: 1s;
+}
+
+.error {
+  display: block !important;
+  background-color: #ff6961;
+}
+
+.success {
+  display: block !important;
+  background-color: #77dd77;
 }
 
 .project-button {
@@ -658,11 +668,10 @@ footer {
   text-decoration: underline;
 }
 
-.form_error {
-  display: none;
-  color: #ffffff;
-  background-color: #ff6961;
+.form_message {
   text-align: center;
+  color: #ffffff;
+  display: none;
   margin-bottom: 15px;
   padding: 20px;
 }

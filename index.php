@@ -1,76 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Jason Furmage | SCS Portfolio
-    </title>
+<?php 
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/application.css">
+$pageTitle = "Jason Furmage | SCS Portfolio";
+$title = "Jason Furmage";
+$subtitle = "Junior Web & Software Developer";
+$heading = "portfolio";
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+include("inc/validation.php");
+include("inc/header.php");
 
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/8736d823db.js" crossorigin="anonymous"></script>
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
-</head>
-<body>
-
-    <!-- Hamburger -->
-
-    <div class="hamburger">
-        <div class="hamburger-bar"></div>
-        <div class="hamburger-bar"></div>
-        <div class="hamburger-bar"></div>
-    </div>
-
-    <!-- Sidebar -->
-
-    <div class="sidebar" id="js-sidebar">
-        <a class="sidebar_header" href="index.html">JF</a>
-        <div class="sidebar-divider"></div>
-        <div class="sidebar_links">
-            <a href="about.html"><strong>About Me</strong></a>
-            <a href="#portfolio"><strong>My Portfolio</strong></a>
-            <a href="examples.html"><strong>Coding Examples</strong></a>
-            <a href="scs.html"><strong>SCS Scheme</strong></a>
-            <a href="#form"><strong>Contact Me</strong></a>
-        </div>
-        <div class="sidebar_social">
-            <a href="https://apps.apple.com/om/developer/jason-furmage/id1199105236" target="_blank"><i class="fa-brands fa-apple"></i></a>
-            <a href="https://www.linkedin.com/in/jason-furmage-9439192a7/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/JasonFurmage/" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
-    </div>
-
-    <!-- Content -->
-
-    <div class="content">
-
-        <header>
-
-            <!-- Banner -->
-
-            <div class="banner" id="top">
-                <h1 id="js-heading">Jason Furmage</h1>
-                <p id="js-subheading">Web & Software Developer</p>
-                <div class="banner_scroll-down">
-                    Scroll Down
-                    <a href="#portfolio"><i class="fa-solid fa-chevron-down"></i></a>
-                </div>
-            </div>
-
-        </header>
+?>
 
         <main>
 
@@ -91,11 +29,11 @@
                             </div>
                             <img src="assets/images/projects/netmatters-homepage.jpg" alt="Netmatters Homepage">
                             <div class="project_body">
-                                <p>The Netmatters homepage rebuilt from scratch using HTML, CSS and Javascript.</p>
+                                <p>The Netmatters homepage and contact us page rebuilt from scratch using HTML, CSS, Javascript and PHP.</p>
                             </div>
                             <div class="project_buttons">
-                                <a class="project-button" href="https://jasonfurmage.github.io/Netmatters-Homepage/" target="_blank"> Demo </a>
-                                <a class="project-button" href="https://github.com/JasonFurmage/Netmatters-Homepage" target="_blank"> Code </a>
+                                <a class="project-button" href="https://netmatters.jason-furmage.netmatters-scs.co.uk/" target="_blank"> Demo </a>
+                                <a class="project-button" href="https://github.com/JasonFurmage/Netmatters-Homepage/" target="_blank"> Code </a>
                             </div>
                         </div>
                     </div>
@@ -104,13 +42,12 @@
                             <div class="project_title">
                                 <h3>Image Generator</h3>
                             </div>
-                            <img src="assets/images/projects/image-generator2.jpg" alt="Project 2">
+                            <img src="assets/images/projects/image-generator.jpg" alt="Project 2">
                             <div class="project_body">
-                                <p>A simple image generator site that uses Picsum's API to fetch images and store them in seperate accounts.</p>
-                                <p>Made using HTML, CSS and Javascript.</p>
+                                <p>A simple image generator site that uses Picsum's API to fetch images and store them in seperate accounts. Made using HTML, CSS and Javascript.</p>
                             </div>
                             <div class="project_buttons">
-                                <a class="project-button" href="https://jasonfurmage.github.io/Image-Generator/" target="_blank"> Demo </a>
+                                <a class="project-button" href="https://js-array.jason-furmage.netmatters-scs.co.uk/" target="_blank"> Demo </a>
                                 <a class="project-button" href="https://github.com/JasonFurmage/Image-Generator/" target="_blank"> Code </a>
                             </div>
                         </div>
@@ -187,7 +124,7 @@
             </div>
 
             <div class="container">
-                <form method="POST" action="#" accept-charset="UTF-8" class="form" id="js-form" name="myForm" onsubmit="return validateForm()" novalidate>
+                <form method="POST" action="#form" accept-charset="UTF-8" class="form" id="js-form" novalidate>
                     <div class="form_section">
                     <div class="form_info">
                         <p>If you're interested and would like to know more, please complete the form below and I'll be in touch shortly.</p>
@@ -207,28 +144,31 @@
                         </p>
                     </div>
                     </div>
-                    <div class="form_section">
-                        <div class="form_error" id="js-error"></div>
+                    <div class="form_section" id="form">
+                        <div class="form_message" id="js-message"></div>
+
+                        <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { if (isset($errors)) insertFormMessages($errors); } ?>
+                        
                         <div class="form_name-wrapper">
                             <div class="form_group">
-                                <input class="form-text-field" name="first_name" type="text" placeholder="First Name*" maxlength="30">
+                                <input class="form-text-field" name="first_name" type="text" placeholder="First Name*" maxlength="255" value="<?= htmlspecialchars($first_name ?? "") ?>">
                                 <small></small>
                             </div>
                             <div class="form_group">
-                                <input class="form-text-field" name="last_name" type="text" placeholder="Last Name*" maxlength="30">
+                                <input class="form-text-field" name="last_name" type="text" placeholder="Last Name*" maxlength="255" value="<?= htmlspecialchars($last_name ?? "") ?>">
                                 <small></small>
                             </div>
                         </div>
                         <div class="form_group">
-                            <input class="form-text-field" name="email" type="email" placeholder="Email Address*" maxlength="50">
+                            <input class="form-text-field" name="email" type="email" placeholder="Email Address*" maxlength="255" value="<?= htmlspecialchars($email ?? "") ?>">
                             <small></small>
                         </div>
                         <div class="form_group">
-                            <input class="form-text-field" name="subject" type="text" placeholder="Subject*" maxlength="100">
+                            <input class="form-text-field" name="subject" type="text" placeholder="Subject*" maxlength="255" value="<?= htmlspecialchars($subject ?? "") ?>">
                             <small></small>
                         </div>
                         <div class="form_group">
-                            <textarea class="form-text-area" name="message" placeholder="Message*" maxlength="1000"></textarea>
+                            <textarea class="form-text-area" name="message" placeholder="Message*"><?= htmlspecialchars($message ?? "") ?></textarea>
                             <small></small>
                         </div>
                         <div class="form_group">
@@ -243,22 +183,5 @@
 
         </main>
 
-        <footer>
 
-            <!-- Footer -->
-
-            <div class="footer_scroll-up">
-                <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
-                Back to Top
-            </div>
-
-        </footer>
-
-    </div>
-
-    <!-- JavaScript -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/app.js"></script>
-
-</body>
-</html>
+ <?php include("inc/footer.php"); ?>

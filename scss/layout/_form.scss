@@ -49,11 +49,9 @@
     }
 }
 
-.form_error {
+.form_message {
+    @include text($color: $white, $text-align: center);
     display: none;
-    color: $white;
-    background-color: $error-red;
-    text-align: center;
     margin-bottom: 15px;
     padding: 20px;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        Jason Furmage | Coding Examples
+        <?php echo $pageTitle; ?>
     </title>
 
     <!-- Styles -->
@@ -37,18 +37,18 @@
     <!-- Sidebar -->
 
     <div class="sidebar" id="js-sidebar">
-        <a class="sidebar_header" href="index.html">JF</a>
+        <a class="sidebar_header" href="index.php">JF</a>
         <div class="sidebar-divider"></div>
         <div class="sidebar_links">
-            <a href="about.html"><strong>About Me</strong></a>
-            <a href="index.html#portfolio"><strong>My Portfolio</strong></a>
-            <a href="examples.html"><strong>Coding Examples</strong></a>
-            <a href="scs.html"><strong>SCS Scheme</strong></a>
-            <a href="index.html#form"><strong>Contact Me</strong></a>
+            <a href="about.php"><strong>About Me</strong></a>
+            <a href="index.php#portfolio"><strong>My Portfolio</strong></a>
+            <a href="examples.php"><strong>Coding Examples</strong></a>
+            <a href="scs.php"><strong>SCS Scheme</strong></a>
+            <a href="index.php#form"><strong>Contact Me</strong></a>
         </div>
         <div class="sidebar_social">
             <a href="https://apps.apple.com/om/developer/jason-furmage/id1199105236" target="_blank"><i class="fa-brands fa-apple"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/jason-furmage-9439192a7/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://github.com/JasonFurmage/" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
     </div>
@@ -62,17 +62,12 @@
             <!-- Banner -->
 
             <div class="banner" id="top">
-                <h1 id="js-heading">Coding Examples</h1>
-                <p id="js-subheading">Coming Soon</p>
+                <h1 id="js-heading"><?php echo $title; ?></h1>
+                <p id="js-subheading"><?php echo $subtitle; ?></p>
+                <div class="banner_scroll-down">
+                    Scroll Down
+                    <a href="#<?php echo $heading; ?>"><i class="fa-solid fa-chevron-down"></i></a>
+                </div>
             </div>
 
         </header>
-
-    </div>
-
-    <!-- JavaScript -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/app.js"></script>
-
-</body>
-</html>

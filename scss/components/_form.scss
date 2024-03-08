@@ -19,7 +19,17 @@
 }
 
 // Hightlight input fields with error.
-.error {
+.invalid {
     border-color: $error-red;
     transition: 1s;
+}
+
+.error {
+    display: block!important;
+    background-color: $error-red;
+}
+
+.success {
+    display: block!important;
+    background-color: $success-green;
 }
