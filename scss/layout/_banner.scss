@@ -1,5 +1,5 @@
 .banner {
-    height: 100vh; // Make banner height equal to view port height.
+    height: 100svh; // Make banner height equal to view port height.
 
     // Center banner items.
     @include flex(column, center, center);
