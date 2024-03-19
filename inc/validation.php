@@ -47,8 +47,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // If submission was successful clear text field variables.
+    // If submission was successful, send email notification and clear text field variables.
     if ($noErrors) {
+        sendEmail($first_name, $last_name, $email, $subject, $message);
         $first_name = $last_name = $email = $email = $subject = $message = null;
     }
 }

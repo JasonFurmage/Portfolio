@@ -22,4 +22,29 @@ function isValidEmail($string) {
     return preg_match($regex, $string);
 }
 
+function sendEmail($first_name, $last_name, $email, $subject, $message) {
+
+    // Set up PHPMailer with Google SMTP server.
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Port = 465;
+    $mail->SMTPSecure = 'ssl';
+    $mail->Username = $_ENV['GMAIL_USER_NAME'];
+    $mail->Password = $_ENV['GMAIL_PASSWORD'];
+
+    // Add form data to email.
+    $mail->setFrom('jfurmageweb@gmail.com', 'Portfolio Enquiries');
+    $mail->addAddress('jfurmage@me.com', 'Jason Furmage');
+    $mail->Subject = $subject;
+    $mail->Body = "Name: $first_name $last_name\nEmail: $email\n\nMessage:\n\n$message";
+
+    // Send email.
+    if(!$mail->send()) {
+        echo 'Email could not be sent.';
+        //$mail->SMTPDebug = \PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;
+    }
+}
+
 ?>
